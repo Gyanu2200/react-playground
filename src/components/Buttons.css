@@ -1,0 +1,7 @@
+.buttons button {
+  margin: 1rem;
+  width: 4%;
+  box-shadow: -0.5px 0.5px 0.5px 0.5px rgb(21, 14, 14);
+  border-radius: 2px;
+  font-weight: bold;
+}
