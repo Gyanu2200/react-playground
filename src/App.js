@@ -14,17 +14,20 @@ function App() {
     setCounter(counter - 1);
   };
   return (
-    <div className="App">
-      <Title />
-      <br />
-      <Display counter={counter} />
-      <Buttons increment={increment} decrement={decrement} />
-      {/* <br /> */}
-      <hr />
-      <section>
-        <h2>Controlled inputfields</h2>
-        <Form />
-      </section>
+    <div>
+      {/* this below div refers only number counter and form */}
+      <div className="numForm">
+        <Title />
+        <br />
+        <Display counter={counter} />
+        <Buttons increment={increment} decrement={decrement} />
+        {/* <br /> */}
+        <hr />
+        <section>
+          <h2>Controlled inputfields</h2>
+          <Form />
+        </section>
+      </div>
     </div>
   );
 }
