@@ -28,6 +28,16 @@ function App() {
           <Form />
         </section>
       </div>
+      <hr />
+      <div>
+        {/* below is part of Movie Api */}
+        {/* Title */}
+        <Title />
+
+        {/* Form */}
+
+        {/* Movie List */}
+      </div>
     </div>
   );
 }
