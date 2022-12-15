@@ -4,6 +4,10 @@ import Buttons from "./components/Buttons";
 import Display from "./components/Display";
 import Title from "./components/Title";
 import { Form } from "./form/Form";
+import { TitleMovie } from "./movie-api/TitleMovie";
+import { Container } from "react-bootstrap";
+import { SearchForm } from "./movie-api/SearchForm";
+import { MovieList } from "./movie-api/MovieList";
 
 function App() {
   const [counter, setCounter] = useState(0);
@@ -14,7 +18,7 @@ function App() {
     setCounter(counter - 1);
   };
   return (
-    <div>
+    <div className="App">
       {/* this below div refers only number counter and form */}
       <div className="numForm">
         <Title />
@@ -29,14 +33,17 @@ function App() {
         </section>
       </div>
       <hr />
-      <div>
-        {/* below is part of Movie Api */}
-        {/* Title */}
-        <Title />
+      <div className="wrapper">
+        <Container>
+          {/* below is part of Movie Api */}
+          {/* Title */}
+          <TitleMovie />
 
-        {/* Form */}
-
-        {/* Movie List */}
+          {/* Form */}
+          <SearchForm />
+          {/* Movie List */}
+          <MovieList />
+        </Container>
       </div>
     </div>
   );
