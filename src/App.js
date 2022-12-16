@@ -17,6 +17,15 @@ function App() {
   const decrement = () => {
     setCounter(counter - 1);
   };
+
+  //below useState and function is for movie api
+  const [movies, setMovies] = useState([]);
+
+  const addMovieToList = (movieObj) => {
+    setMovies([...movies, movieObj]);
+  };
+  console.log(movies);
+
   return (
     <div className="App">
       {/* this below div refers only number counter and form */}
@@ -40,7 +49,7 @@ function App() {
           <TitleMovie />
 
           {/* Form */}
-          <SearchForm />
+          <SearchForm addMovieToList={addMovieToList} />
           {/* Movie List */}
           <MovieList />
         </Container>
