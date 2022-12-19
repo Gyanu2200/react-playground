@@ -2,7 +2,7 @@ import React from "react";
 import { Button, ButtonGroup, Col, Row } from "react-bootstrap";
 import { MovieCard } from "./MovieCard";
 
-export const MovieList = () => {
+export const MovieList = ({ movies }) => {
   return (
     <div className="m-2 p-3 bg-dark rounded">
       <Row>
@@ -17,10 +17,9 @@ export const MovieList = () => {
       </Row>
       <Row>
         <Col className="py-2 d-flex justify-content-around flex-wrap">
-          <MovieCard />
-          <MovieCard />
-          <MovieCard />
-          <MovieCard />
+          {movies.map((item) => (
+            <MovieCard />
+          ))}
         </Col>
       </Row>
     </div>

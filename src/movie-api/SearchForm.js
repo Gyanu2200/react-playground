@@ -26,7 +26,7 @@ export const SearchForm = ({ addMovieToList }) => {
   const handleOnSubmit = async (e) => {
     e.preventDefault();
     console.log(form);
-    err && setErr("");
+    err && setErr(" ");
     movie.imdbID && setMovie({});
 
     try {
@@ -42,10 +42,11 @@ export const SearchForm = ({ addMovieToList }) => {
       setErr("Error");
     }
   };
-  const handleOnAddToList = (type) => {
-    console.log(type);
-    addMovieToList();
+  const handleOnAddToList = (category) => {
+    console.log(category);
+    addMovieToList(...movie, category);
   };
+  console.log(movie);
   // display movie data in the UI
   return (
     <Form className="container" onSubmit={handleOnSubmit}>

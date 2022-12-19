@@ -51,7 +51,7 @@ function App() {
           {/* Form */}
           <SearchForm addMovieToList={addMovieToList} />
           {/* Movie List */}
-          <MovieList />
+          <MovieList movies={movies} />
         </Container>
       </div>
     </div>
